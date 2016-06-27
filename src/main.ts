@@ -7,7 +7,6 @@ import "rxjs/add/operator/publishReplay";
 
 // This is the boilerplate code you need to copy - but make sure to understand it :)
 type Reducer<S> = (state: S) => S;
-
 function createState<S>(reducers: Observable<Reducer<S>>, initialState: S) {
     return reducers
         .scan( (state: S, reducer: Reducer<S>) => reducer(state), initialState)
