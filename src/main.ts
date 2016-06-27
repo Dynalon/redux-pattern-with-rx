@@ -16,11 +16,12 @@ function createState<S>(reducers: Observable<Reducer<S>>, initialState: S) {
         .refCount();
 }
 
+// our application state as strongly typed class
 class AppState {
     counter: number = 0;
 };
 
-// Actions are actually just RxJS Subjects with explicit type information
+// actions are actually just RxJS Subjects with explicit type information
 const counterActions = {
     increment: new Subject<number>(),
     decrement: new Subject<number>()
