@@ -1,0 +1,18 @@
+{
+  "name": "redux-pattern-with-rx",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "typings install",
+    "build": "tsc && webpack"
+  },
+  "author": "Timo Dörr <timo@latecrew.de>",
+  "license": "MIT",
+  "devDependencies": {
+    "rxjs": "^5.0.0-beta.9",
+    "typescript": "^1.8.10",
+    "typings": "^1.3.0",
+    "webpack": "^1.13.1"
+  }
+}

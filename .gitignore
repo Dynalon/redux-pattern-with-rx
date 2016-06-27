@@ -1,6 +1,8 @@
 *.tmp
-*.js
-*.js.map
+src/*.js
+src/*.js.map
+webpack.config.js
+dist/
 .DS_Store
 node_modules/
 typings/
