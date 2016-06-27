@@ -38,6 +38,7 @@ const counterReducer = Observable.merge(
     })
 );
 
+// put together all reducers - replaces createReducer in Redux
 const reducer = Observable.merge(
     counterReducer
     /* ...
@@ -46,7 +47,7 @@ const reducer = Observable.merge(
     */
 );
 
-// setup done, now lets get started
+// SETUP DONE, NOW LETS GET STARTED!
 
 // the state replaces the store known from Redux
 const state: Observable<AppState> = createState(reducer, new AppState());
