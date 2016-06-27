@@ -1,0 +1,8 @@
+*.tmp
+*.js
+*.js.map
+.DS_Store
+node_modules/
+typings/
+node_modules/
+npm-debug.log
