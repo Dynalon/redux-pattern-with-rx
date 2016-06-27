@@ -1,7 +1,7 @@
 Redux pattern implemented in RxJS
 =====
 
-This is a sample project / tutorial that demonstrates how to implement the Redux pattern (i.e. for usage with React) in TypeScript using only [RxJS v5](https://github.com/ReactiveX/rxjs) inspired by the blog post by [Michael Zalecki](http://michalzalecki.com/use-rxjs-with-react/)
+This is a sample project / tutorial that demonstrates how to implement the Redux pattern (i.e. for usage with React) in TypeScript using only [RxJS v5](https://github.com/ReactiveX/rxjs) inspired by the blog post by [Michael Zalecki](http://michalzalecki.com/use-rxjs-with-react/).
 
 Advantages
 -----
