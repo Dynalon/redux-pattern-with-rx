@@ -8,7 +8,7 @@ Advantages
 
 * __Typed actions by default__: No need for [FSA](https://github.com/acdlite/flux-standard-action) or magic string constants; all actions are implemented using the `.next()` and `.error()` methods on typed `Rx.Subject`s.
 * No need for endless `switch` statements
-* Almost __no boilerplate code__, no dependencies other than RxJS using only the `map`, `merge`, `scan` and `publishReplay` operators.
+* Almost __[no boilerplate code](blob/master/src/rxjs-redux.ts)__, no dependencies other than RxJS using only the `map`, `merge`, `scan` and `publishReplay` operators.
 
 How to build
 ----
