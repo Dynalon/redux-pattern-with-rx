@@ -1,4 +1,5 @@
 import {Subject} from "rxjs/Subject";
+import "rxjs/add/operator/map";
 import {createReducer} from "./rxjs-redux";
 import {AppState} from "./main";
 
