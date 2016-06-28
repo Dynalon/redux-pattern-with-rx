@@ -5,9 +5,7 @@ import "rxjs/add/operator/publishReplay";
 
 // THIS FILE CONTAINS THE BOILERPLATE CODE YOU NEED TO COPY
 
-export interface Reducer<S> {
-    (state: S): S;
-}
+export type Reducer<S> = (state: S) => S;
 
 export function createState<S>(reducers: Observable<Reducer<S>>, initialState: S): Observable<S> {
     return reducers
