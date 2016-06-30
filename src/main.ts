@@ -3,7 +3,7 @@ import {counterActions, counterReducer, CounterState} from "./counter";
 import {nameActions, nameReducer, NameState} from "./appName";
 
 // our application state as strongly typed class
-export class AppState implements CounterState, NameState {
+class AppState implements CounterState, NameState {
     counter: number = 0;
     appName: string = "";
 };
