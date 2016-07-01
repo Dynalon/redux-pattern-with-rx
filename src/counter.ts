@@ -2,6 +2,8 @@ import {Subject} from "rxjs/Subject";
 import "rxjs/add/operator/map";
 import {createReducer} from "./rxjs-redux";
 
+// note how we define the parts of the State used in this file in a separate interface
+// (all state interfaces will be merge later to form the global state).
 export interface CounterState {
     counter: number;
 }

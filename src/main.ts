@@ -2,14 +2,17 @@ import {createState, createReducer} from "./rxjs-redux";
 import {counterActions, counterReducer, CounterState} from "./counter";
 import {nameActions, nameReducer, NameState} from "./appName";
 
-// our application state as strongly typed class
-class AppState implements CounterState, NameState {
-    counter: number = 0;
-    appName: string = "";
+// our application state as a strongly typed class which makes up the initial state
+interface IAppState extends CounterState, NameState /* otherState1, otherState2,...*/ {}
+
+// best practice is to use a plain object as State instance to allow serialization etc.
+const initialState: IAppState = {
+    counter: 0,
+    appName: "Initial Name"
 };
 
 // put together all reducers just as with createReducer in Redux
-const reducer = createReducer<AppState>(
+const reducer = createReducer<IAppState>(
     counterReducer,
     nameReducer
     /* ...
@@ -19,7 +22,7 @@ const reducer = createReducer<AppState>(
 );
 
 // the state replaces the store known from Redux
-const state = createState(reducer, new AppState());
+const state = createState(reducer, initialState);
 
 // output every state change
 state.subscribe(newState => {
@@ -34,8 +37,7 @@ state.subscribe(newState => {
 // dispatch some actions
 counterActions.increment.next(1);
 counterActions.increment.next(1);
+nameActions.appName.next("Foo");
 counterActions.decrement.next(5);
 counterActions.increment.next(8);
-
-nameActions.appName.next("Foo");
 nameActions.appName.next("Bar");
