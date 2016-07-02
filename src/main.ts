@@ -2,7 +2,7 @@ import {createState, createReducer} from "./rxjs-redux";
 import {counterActions, counterReducer, CounterState} from "./counter";
 import {nameActions, nameReducer, NameState} from "./appName";
 
-// our application state as a strongly typed class which makes up the initial state
+// our application state as a strongly typed class
 interface IAppState extends CounterState, NameState /* otherState1, otherState2,...*/ {}
 
 // best practice is to use a plain object as State instance to allow serialization etc.
