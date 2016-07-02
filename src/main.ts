@@ -26,7 +26,7 @@ const state = createState(reducer, initialState);
 
 // output every state change
 state.subscribe(newState => {
-    const stateJson = document.createTextNode(JSON.stringify(newState, undefined, 2));
+    const stateJson = document.createTextNode(JSON.stringify(newState));
     document.querySelector("body").appendChild(stateJson);
 
     // add a line break after each state update
