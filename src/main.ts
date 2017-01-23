@@ -35,8 +35,8 @@ state.subscribe(newState => {
 });
 
 // dispatch some actions
-counterActions.increment.next(1);
-counterActions.increment.next(1);
+counterActions.increment.next();
+counterActions.increment.next();
 nameActions.appName.next("Foo");
 counterActions.decrement.next(5);
 counterActions.increment.next(8);
