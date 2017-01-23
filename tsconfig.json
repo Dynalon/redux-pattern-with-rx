@@ -1,6 +1,7 @@
 {
     "compilerOptions": {
         "target": "ES5",
+        "declaration": true,
         "sourceMap": true,
         "lib": [ "es5", "es2015.promise", "dom" ]
     },

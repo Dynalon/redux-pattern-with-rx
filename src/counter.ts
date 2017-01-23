@@ -1,5 +1,7 @@
 import { Subject } from "rxjs/Subject";
+import { Observable } from "rxjs/Observable";
 import "rxjs/add/operator/map";
+
 import { createReducer } from "./rxjs-redux";
 
 // note how we define the parts of the State used in this file in a separate interface

@@ -2,7 +2,8 @@
   "name": "redux-pattern-with-rx",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/rxjs-redux.js",
+  "typings": "src/rxjs-redux.d.ts",
   "scripts": {
     "postinstall": "typings install",
     "build": "tsc && webpack",

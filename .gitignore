@@ -1,5 +1,6 @@
 *.tmp
 src/*.js
+src/*.d.ts
 src/*.js.map
 webpack.config.js
 dist/
