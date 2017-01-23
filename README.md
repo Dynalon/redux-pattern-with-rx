@@ -16,7 +16,7 @@ How to build
 1. Clone this repo
 1. `npm install`
 1. `npm run build`
-1. Run a webserver from the `dist` folder for testing
+1. `npm run serve` to start a http-server in `dist/` for testing
 
 Notes
 ----

@@ -5,11 +5,13 @@
   "main": "index.js",
   "scripts": {
     "postinstall": "typings install",
-    "build": "tsc && webpack"
+    "build": "tsc && webpack",
+    "serve": "http-server -o -p 31728 dist/"
   },
   "author": "Timo Dörr <timo@latecrew.de>",
   "license": "MIT",
   "devDependencies": {
+    "http-server": "^0.9.0",
     "rxjs": "^5.0.3",
     "typescript": "^2.1.5",
     "webpack": "^1.13.1"
