@@ -18,6 +18,11 @@ How to build
 1. `npm run build`
 1. `npm run serve` to start a http-server in `dist/` for testing
 
+Production use
+----
+
+You can use this code in production, all you need is to copy the file [rxjs-redux.ts](https://github.com/Dynalon/redux-pattern-with-rx/blob/master/src/rxjs-redux.ts) into your project (or use the compiled .js alternative if you use plain JavaScript).
+
 Notes
 ----
 
