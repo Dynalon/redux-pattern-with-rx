@@ -1,4 +1,4 @@
-import {Observable} from "rxjs/Observable";
+import { Observable } from "rxjs/Observable";
 import "rxjs/add/observable/merge";
 import "rxjs/add/operator/scan";
 import "rxjs/add/operator/publishReplay";
@@ -9,7 +9,7 @@ export type Reducer<S> = (state: S) => S;
 
 export function createState<S>(reducers: Observable<Reducer<S>>, initialState: S): Observable<S> {
     return reducers
-        .scan( (state: S, reducer: Reducer<S>) => reducer(state), initialState)
+        .scan((state: S, reducer: Reducer<S>) => reducer(state), initialState)
 
         // these two lines make our observable hot and have it emit the last state
         // upon subscription
