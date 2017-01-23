@@ -15,7 +15,6 @@ export const nameActions = {
 // action is emitted
 export const nameReducer = createReducer<NameState>(
     nameActions.appName.map( newName => {
-        // replace Object.assign with ES7 object spread operator as soon as TypeScript supports it :(
-        return (state: NameState) => Object.assign(state, { appName: newName });
+        return (state: NameState) => ({ ...state, appName: newName });
     })
 );

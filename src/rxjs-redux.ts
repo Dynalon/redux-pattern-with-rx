@@ -11,7 +11,8 @@ export function createState<S>(reducers: Observable<Reducer<S>>, initialState: S
     return reducers
         .scan( (state: S, reducer: Reducer<S>) => reducer(state), initialState)
 
-        // these two lines make our observable emit the last state upon subscription
+        // these two lines make our observable hot and have it emit the last state
+        // upon subscription
         .publishReplay(1)
         .refCount();
 }

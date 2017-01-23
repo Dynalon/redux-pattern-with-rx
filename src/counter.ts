@@ -18,10 +18,9 @@ export const counterActions = {
 // action is emitted
 export const counterReducer = createReducer<CounterState>(
     counterActions.increment.map( (n = 1) => {
-        // replace Object.assign with ES7 object spread operator as soon as TypeScript supports it :(
-        return (state: CounterState) => Object.assign(state, { counter: state.counter + n });
+        return (state: CounterState) => ({ ...state, counter: state.counter + n })
     }),
     counterActions.decrement.map( (n = 1) => {
-        return (state: CounterState) => Object.assign(state, { counter: state.counter - n });
+        return (state: CounterState) => ({ ...state, counter: state.counter - n });
     })
 );
