@@ -1,9 +1,10 @@
-import {createState, createReducer} from "./rxjs-redux";
-import {counterActions, counterReducer, CounterState} from "./counter";
-import {nameActions, nameReducer, NameState} from "./appName";
+import {  Observable } from "rxjs/Observable";
+import { createState, createReducer } from "./rxjs-redux";
+import { counterActions, counterReducer, CounterState } from "./counter";
+import { nameActions, nameReducer, NameState } from "./appName";
 
-// our application state as a strongly typed class
-interface IAppState extends CounterState, NameState /* otherState1, otherState2,...*/ {}
+// our application state as a strongly typed interface
+interface IAppState extends CounterState, NameState /* otherState1, otherState2,...*/ { }
 
 // best practice is to use a plain object as State instance to allow serialization etc.
 const initialState: IAppState = {
@@ -21,8 +22,8 @@ const reducer = createReducer<IAppState>(
     */
 );
 
-// the state replaces the store known from Redux
-const state = createState(reducer, initialState);
+// the state observable replaces the store known from Redux
+const state: Observable<IAppState> = createState(reducer, initialState);
 
 // output every state change
 state.subscribe(newState => {
