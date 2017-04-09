@@ -2,7 +2,7 @@ import { Subject } from "rxjs/Subject";
 import { Observable } from "rxjs/Observable";
 import "rxjs/add/operator/map";
 
-import { createReducer } from "./rxjs-redux";
+import { createStateMutators } from "./rxjs-redux";
 
 // note how we define the parts of the State used in this file in a separate interface
 // (all state interfaces will be merge later to form the global state).
@@ -16,9 +16,9 @@ export const counterActions = {
     decrement: new Subject<number>()
 };
 
-// the reducer is an observable of reducer functions invoked whenever an
+// the state mutators is an observable of mutator functions invoked whenever an
 // action is emitted
-export const counterReducer = createReducer<CounterState>(
+export const counterMutator = createStateMutators<CounterState>(
     counterActions.increment.map((n = 1) => {
         return (state: CounterState) => ({ ...state, counter: state.counter + n })
     }),

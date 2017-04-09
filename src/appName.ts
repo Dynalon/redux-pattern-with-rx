@@ -2,7 +2,7 @@ import { Subject } from "rxjs/Subject";
 import { Observable } from "rxjs/Observable";
 import "rxjs/add/operator/map";
 
-import { createReducer } from "./rxjs-redux";
+import { createStateMutators } from "./rxjs-redux";
 
 export interface NameState {
     appName: string;
@@ -15,7 +15,7 @@ export const nameActions = {
 
 // the reducer is an observable of reducer functions invoked whenever an
 // action is emitted
-export const nameReducer = createReducer<NameState>(
+export const nameMutator = createStateMutators<NameState>(
     nameActions.appName.map(newName => {
         return (state: NameState) => ({ ...state, appName: newName });
     })
