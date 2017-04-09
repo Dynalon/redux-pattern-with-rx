@@ -4,15 +4,15 @@ module.exports = {
     target: 'web',
     entry: "main.js",
     resolve: {
-        root: path.resolve('./src/'),
+        root: path.resolve('./dist/'),
         extensions: ['', '.json', '.js']
     },
     output: {
-        path: __dirname + '/dist/',
-        filename: 'bundle.js',
+        path: __dirname + '/dist/bundle/',
+        filename: 'rxjs-redux.js',
 
         // will be the global variable that the autobahn.js file exports to
-        library: 'ReduxPatternWithRx',
+        library: 'RxJSRedux',
         libraryTarget: 'umd'
     }
 };
