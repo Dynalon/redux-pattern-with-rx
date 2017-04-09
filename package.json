@@ -5,7 +5,6 @@
   "main": "dist/rxjs-redux.js",
   "typings": "dist/rxjs-redux.d.ts",
   "scripts": {
-    "postinstall": "typings install",
     "build": "tsc && webpack",
     "serve": "http-server -o -p 31728 dist/"
   },
