@@ -7,6 +7,7 @@ var __assign = (this && this.__assign) || Object.assign || function(t) {
     }
     return t;
 };
+Object.defineProperty(exports, "__esModule", { value: true });
 // imports for static example (Redux like)
 var rxjs_redux_1 = require("./rxjs-redux");
 var counter_1 = require("./counter");
@@ -20,7 +21,12 @@ var initialState = {
     appName: "Initial Name"
 };
 // put together all reducers just as with createReducer in Redux
-var stateMutators = rxjs_redux_1.createStateMutators(counter_1.counterMutator, appName_1.nameMutator);
+var stateMutators = rxjs_redux_1.createStateMutators(counter_1.counterMutator, appName_1.nameMutator
+/* ...
+myOtherReducer1,
+myOtherReducer2
+*/
+);
 // the state observable replaces the store known from Redux
 var state = rxjs_redux_1.createState(stateMutators, initialState);
 // helper function to print state changes
