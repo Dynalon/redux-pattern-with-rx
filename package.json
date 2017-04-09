@@ -2,6 +2,9 @@
   "name": "redux-pattern-with-rx",
   "version": "1.0.0",
   "description": "",
+  "files": [
+	"dist/"
+  ],
   "main": "dist/rxjs-redux.js",
   "typings": "dist/rxjs-redux.d.ts",
   "scripts": {

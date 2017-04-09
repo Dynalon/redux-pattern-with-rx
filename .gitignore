@@ -3,7 +3,6 @@ src/*.js
 src/*.d.ts
 src/*.js.map
 webpack.config.js
-dist/
 .DS_Store
 node_modules/
 typings/
