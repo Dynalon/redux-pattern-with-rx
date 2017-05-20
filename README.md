@@ -1,4 +1,4 @@
-UPDATE: I have created a standalone and more advanced project on GitHub with ready-to-use code on GitHub: <https://github.com/Dynalon/reactive-state>. All further development happens there. Please use this repo in the future. This existing repo is kept for educational purposes in the meantime.
+# UPDATE: I have created a standalone and more advanced project on GitHub with ready-to-use code on GitHub: <https://github.com/Dynalon/reactive-state>. All further development happens there. Please use this repo in the future. This existing repo is kept for educational purposes in the meantime.
 
 Redux pattern implemented in RxJS
 =====
